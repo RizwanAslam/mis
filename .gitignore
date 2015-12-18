@@ -2,3 +2,12 @@
 .env.*.php
 .env.php
 .env
+
+.idea
+
+/vendor
+/node_modules
+Homestead.yaml
+Homestead.json
+
+.idea/laravel-plugin.xml
