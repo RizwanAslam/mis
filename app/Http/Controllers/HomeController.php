@@ -12,8 +12,8 @@ class HomeController extends Controller
 {
     public function home()
     {
-
         $callouts = Callout::all();
+
         return view('home',compact('callouts'));
     }
 

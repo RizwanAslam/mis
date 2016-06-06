@@ -1,7 +1,7 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>MIS | Softpyramid</title>
+    <title>MIS | CodeBrisk</title>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="{{ url() }}/css/app.css">
 
@@ -16,7 +16,7 @@
         }
     </style>
     <!-- favicon -->
-    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="shortcut icon" href="/images/brisk.png">
 
     @yield('page-css')
 </head>
@@ -31,7 +31,7 @@
                 <span class="icon-bar"></span>
             </button>
             <div class="navbar-brand">
-                <a href="/"><img src="/softpyramid_small.jpeg" style="height: 30px;width: 55px;"></a>
+                <a href="/"><img src="/images/cblogo.png" style="height: 30px;width: 55px; background-color: #9d9d9d; border-radius: 25px; padding: 2px;"></a>
                 MIS
             </div>
 
