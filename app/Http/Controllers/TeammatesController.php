@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Teammate;
+use App\User;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -45,7 +47,26 @@ class TeammatesController extends Controller
      */
     public function store(Request $request)
     {
-        Teammate::create($request->all());
+        $request->merge([
+            'date_of_joining'=>Carbon::now(),
+            'designation' => 'Software Engineer'
+        ]);
+
+        $request->merge(['date_of_joining'=>Carbon::now()]);
+        $teammate = Teammate::create($request->all());
+        $user = [
+            'name' => $request->full_name.' '.$request->father_name,
+            'email'=> $request->email,
+            'password' => bcrypt('123456'),
+            'role' => 'developer',
+            'no_of_leaves' => 6,
+            'basic_pay' => '5000.00',
+            'months_of_increment' => 6,
+            'months_of_confirmation' => 3,
+            'teammate_id' => $teammate->id
+        ];
+
+        User::create($user);
         return redirect('teammates')->with('status', 'Teammate created!');
     }
 

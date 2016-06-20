@@ -45,7 +45,7 @@
                     <li @if(Request::is('salary/*')) class="active" @endif><a href="/salary">Salary</a></li>
                     <li @if(Request::is('invoices/*')) class="active" @endif><a href="/invoices">Invoices</a></li>
                 @endif
-                <li @if(Request::is('projects/*')) class="active" @endif><a href="/projects">Projects</a></li>
+                {{--<li @if(Request::is('projects/*')) class="active" @endif><a href="/projects">Projects</a></li>--}}
 
 
             </ul>
