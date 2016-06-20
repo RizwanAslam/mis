@@ -49,20 +49,18 @@ class TeammatesController extends Controller
     {
         $request->merge([
             'date_of_joining'=>Carbon::now(),
-            'designation' => 'Software Engineer'
+            'designation' => 'Software Engineer',
+            'no_of_leaves' => 6,
+            'basic_pay' => '5000.00',
+            'months_of_increment' => 6,
+            'months_of_confirmation' => 3,
         ]);
-
-        $request->merge(['date_of_joining'=>Carbon::now()]);
         $teammate = Teammate::create($request->all());
         $user = [
             'name' => $request->full_name.' '.$request->father_name,
             'email'=> $request->email,
             'password' => bcrypt('123456'),
             'role' => 'developer',
-            'no_of_leaves' => 6,
-            'basic_pay' => '5000.00',
-            'months_of_increment' => 6,
-            'months_of_confirmation' => 3,
             'teammate_id' => $teammate->id
         ];
 
