@@ -4,4 +4,4 @@ Your leave request for the date of {{ $leave->start_date }} has been received.<b
 <br>
 Thanks,<br>
 HR<br>
-Soft Pyramid
+CodeBrisk

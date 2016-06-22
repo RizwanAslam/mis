@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Leave;
 use Carbon\Carbon;
 use App\Http\Requests;
+use Illuminate\Support\Facades\Mail;
 
 class UserController extends Controller
 {
@@ -42,12 +43,11 @@ class UserController extends Controller
                 return redirect()->back()->with('error','Sorry, You have already availed your earned leaves!');
             }
 
-            $teammate->leaves()->save(new Leave($request->all()));
+            $leave = $teammate->leaves()->save(new Leave($request->all()));
 
-//            //send email
-//            Mail::send('emails.leave-approved', ['leave' => $leave], function ($m) use ($leave) {
-//                $m->to($leave->teammate->email, $leave->teammate->name)->subject('Leave has been approved');
-//            });
+            Mail::send('emails.leave-request', ['leave' => $leave], function ($m) use ($leave) {
+                $m->to('rizwan@codebrisk.com', "HR")->subject('Leave has been applied');
+            });
 
             return redirect()->route('home')->with('status', 'Leave Application has been submitted!');
         }
