@@ -2,6 +2,7 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>MIS | CodeBrisk</title>
+    <link rel="shortcut icon" href="/images/brisk.png">
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="{{ url() }}/css/app.css">
 
