@@ -54,7 +54,7 @@ return [
     |
     */
 
-    'from' => ['address' => 'hr@softpyramid.com', 'name' => 'HR'],
+    'from' => ['address' => 'mis@codebrisk.com', 'name' => 'HR'],
 
     /*
     |--------------------------------------------------------------------------

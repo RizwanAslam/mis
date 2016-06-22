@@ -50,7 +50,7 @@ class TeammatesController extends Controller
         $request->merge([
             'date_of_joining'=>Carbon::now(),
             'designation' => 'Software Engineer',
-            'no_of_leaves' => 6,
+            'no_of_leaves' => 20,
             'basic_pay' => '5000.00',
             'months_of_increment' => 6,
             'months_of_confirmation' => 3,
