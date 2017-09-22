@@ -28,6 +28,10 @@
         {!! Form::text('basic_pay', $teammate->basic_pay,array('class'=>'form-control')) !!}
     </div>
     <div class="form-group">
+        {!! Form::label('hourly_rate', 'Rate per Hour')  !!}
+        {!! Form::text('hourly_rate', $teammate->hourly_rate,array('class'=>'form-control')) !!}
+    </div>
+    <div class="form-group">
         {!! Form::label('no_of_leaves', 'Annual Leaves')  !!}
         {!! Form::text('no_of_leaves', $teammate->no_of_leaves,array('class'=>'form-control')) !!}
     </div>

@@ -58,6 +58,14 @@ Route::group(['middleware' => 'auth'], function () {
         resource('{teammate}/increments' ,'IncrementsController', ['only' => ['index', 'create','store']]);
     });
 
+    //Salary
+    Route::group(['prefix' => 'salary'], function()
+    {
+        Route::post('/store' , 'SalaryController@store');
+        Route::post('/check-month/{teammate_id}' , 'SalaryController@checkMonthSalary' );
+
+    });
+
 
     //Approvals
     Route::group(['prefix' => 'approval'], function()

@@ -21,6 +21,9 @@ class Teammate extends Model
     {
         return $this->hasMany(Increment::class);
     }
+    public function salaries() {
+        return $this->hasMany(Salary::class);
+    }
 
     public function getAvailedAttribute()
     {

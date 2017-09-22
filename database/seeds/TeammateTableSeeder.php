@@ -14,20 +14,20 @@ class TeammateTableSeeder extends Seeder
     {
         Model::unguard();
         Teammate::create([
-            'full_name'=>'Fakhar Zaman Khan',
-            'father_name'=>'Munir Ahamed Khan',
-            'date_of_birth'=>'1980-02-18',
-            'date_of_joining'=>'2013-10-10',
+            'full_name'=>'Rizwan Aslam',
+            'father_name'=>'Muhammad Aslam',
+            'date_of_birth'=>'',
+            'date_of_joining'=>'2016-05-02',
             'designation'=>'CEO',
             'months_of_confirmation'=>'1',
             'months_of_increment'=>'12',
             'basic_pay'=>'50000',
-            'email'=>'fakhar@softpyramid.com',
-            'phone_mobile'=>'03224058008',
-            'phone_home'=>'3569797',
-            'address1'=>'32 A Ferozpur road',
+            'email'=>'rizwan@codebrisk.com',
+            'phone_mobile'=>'',
+            'phone_home'=>'',
+            'address1'=>'Al Rehman Trade Center, University Road، Sargodha 40100',
             'address2'=>'',
-            'city'=>'Lahore',
+            'city'=>'Sargodha',
             'elance_user_id'=>'2499639'
         ]);
         Model::reguard();
